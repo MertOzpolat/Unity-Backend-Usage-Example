@@ -50,6 +50,14 @@ public class AuthController : MonoBehaviour
     }
     public void LoginButtonHandler()
     {
+        if (loginMailInput.text == "")
+        {
+            loginMailInput.text = "admin@admin.com";
+        }
+        if (loginPassInput.text == "")
+        {
+            loginPassInput.text = "123456";
+        }
         //dont use my backend for nothing
         if (!Validator.CheckMail(loginMailInput.text)) return;//throw error.
         if (!Validator.CheckPassword(loginPassInput.text)) return;//throw error.
@@ -81,6 +89,6 @@ public class AuthController : MonoBehaviour
     }
     void LoginSuccess(AuthResponse authResponse)
     {
-        SampleSceneController.Instance.SetCurrentUser(authResponse.user,authResponse.access_token);
+        SampleSceneController.Instance.SetCurrentUser(authResponse.user, authResponse.access_token);
     }
 }

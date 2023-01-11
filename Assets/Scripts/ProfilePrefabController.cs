@@ -18,6 +18,9 @@ public class ProfilePrefabController : MonoBehaviour
     [SerializeField] TMP_Text balanceText;
     [SerializeField] TMP_Text itemsText;
     [SerializeField] Button updateButton;
+    [SerializeField] FriendsPopupController friendsPopup;
+    [SerializeField] ItemsPopupController itemsPopup;
+    [SerializeField] ClanPopupController clanPopupController;
 
     public void InitProfilePrefab(User user)
     {
@@ -31,6 +34,7 @@ public class ProfilePrefabController : MonoBehaviour
     }
     public void UpdateButtonHandler()
     {
+        Debug.Log(SampleSceneController.Instance.currentUser.name);
         if (nameText.text != SampleSceneController.Instance.currentUser.name || aboutText.text != SampleSceneController.Instance.currentUser.about)
         {
             SampleSceneController.Instance.currentUser.name = nameText.text;
@@ -38,6 +42,21 @@ public class ProfilePrefabController : MonoBehaviour
             updateButton.enabled = false;
             SendNewData();
         }
+    }
+    public void OpenFriendsPopup()
+    {
+        friendsPopup.gameObject.SetActive(true);
+        friendsPopup.OpenPopup();
+    }
+    public void OpenItemsPopup()
+    {
+        itemsPopup.gameObject.SetActive(true);
+        itemsPopup.OpenPopup();
+    }
+    public void OpenClanButton()
+    {
+        clanPopupController.gameObject.SetActive(true);
+        clanPopupController.OpenPopup();
     }
 
     private void SendNewData()
