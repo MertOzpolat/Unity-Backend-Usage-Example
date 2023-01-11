@@ -1923,6 +1923,8 @@ MonoBehaviour:
   itemsText: {fileID: 0}
   updateButton: {fileID: 0}
   friendsPopup: {fileID: 0}
+  itemsPopup: {fileID: 0}
+  clanPopupController: {fileID: 0}
 --- !u!114 &782407534
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5046,6 +5048,8 @@ MonoBehaviour:
   itemsText: {fileID: 0}
   updateButton: {fileID: 0}
   friendsPopup: {fileID: 0}
+  itemsPopup: {fileID: 0}
+  clanPopupController: {fileID: 0}
 --- !u!114 &1592939249
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5548,6 +5552,8 @@ MonoBehaviour:
   itemsText: {fileID: 0}
   updateButton: {fileID: 0}
   friendsPopup: {fileID: 0}
+  itemsPopup: {fileID: 0}
+  clanPopupController: {fileID: 0}
 --- !u!114 &1665188399
 MonoBehaviour:
   m_ObjectHideFlags: 0
