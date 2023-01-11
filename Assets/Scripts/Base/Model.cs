@@ -20,6 +20,7 @@ public class AuthResponse
 }
 public class User
 {
+    public string _id;
     public string name;
     public string email;
     public string password;
@@ -32,18 +33,30 @@ public class User
     public int level;
     public int exprience;
     public string clan;//clan ref object.
-    public User[] friends;
-    public User[] blockList;
+    public string[] friends;
+    public string[] blockList;
     public int balance;
-    public Item[] inventory;
+    public string[] inventory;
 }
 public class Item
 {
+    public string _id;
     public string name;
     public string image;
     public string info;
 }
-
+[System.Serializable]
+public class Clan{
+    public string _id;
+    public string name;
+    public string[] managers;
+    public string[] users;
+    public string image;
+    public string clanExperience;
+    public string clanLevel;
+    public Item[] inventory;
+    
+}
 [System.Serializable]
 public class MenuItem
 {

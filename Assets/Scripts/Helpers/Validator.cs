@@ -25,6 +25,7 @@ public static class Validator
         if (nameString.Length < 6) return false;
         string pattern = @"^[a-zA-Z][a-zA-Z0-9]{5,11}$";
         Regex regex = new Regex(pattern);
+        Debug.Log("CheckName" + regex.IsMatch(nameString));
         return regex.IsMatch(nameString);
     }
     public static bool CheckPassword(string passString)
