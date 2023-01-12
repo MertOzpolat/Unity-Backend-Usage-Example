@@ -1,5 +1,12 @@
 {
   "dependencies": {
+    "com.dubitlimited.duck.unity-http": {
+      "version": "https://github.com/dubit/unity-http.git",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {},
+      "hash": "709612fec948d2de7a31b280c4730d161219f9d6"
+    },
     "com.unity.2d.animation": {
       "version": "7.0.8",
       "depth": 1,
